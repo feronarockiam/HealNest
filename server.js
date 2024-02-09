@@ -50,7 +50,7 @@ app.post('/submit-appointment', async (req, res) => {
             message
         });
 
-        res.status(201).json({ message: 'Appointment booked successfully' });
+        res.redirect('/homepage');
     } catch (error) {
         console.error('Error:', error);
         res.status(500).json({ error: 'Internal Server Error' });
